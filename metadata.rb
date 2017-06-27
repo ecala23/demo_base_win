@@ -4,13 +4,13 @@ maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures demo_base_win'
 long_description 'Installs/Configures demo_base_win'
-version '0.2.0'
+version '0.2.1'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
 depends 'chef-client'
-depends 'omnibus_updater'
-depends 'audit'
-depends 'iis'
+depends 'chef_client_updater'
+# depends 'audit'
+# depends 'iis'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when

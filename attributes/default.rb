@@ -1,15 +1,18 @@
 #change version number - next chef client run will upgrade/downgrade client
-default['omnibus_updater']['version'] = '12.20.3'
+default['chef_client_updater']['prevent_downgrade'] = false
+#change version number - next chef client run will upgrade/downgrade client
+#default['chef_client_updater']['version'] = '12.19.36'
+default['chef_client_updater']['version'] = '12.20.3'
 #Configures audit-coobook - to run profiles and report back to automate
-default['audit']['fetcher'] = 'chef-automate'
-default['audit']['reporter'] = 'chef-automate'
-default['audit']['profiles'] = [
-  {
-    name: 'workstation-1/windows-baseline',
-    compliance: 'workstation-1/windows-baseline'
-  },
-  {
-    name: 'workstation-1/windows-patch-baseline',
-    compliance: 'workstation-1/windows-patch-baseline'
-  }
-]
+# default['audit']['fetcher'] = 'chef-automate'
+# default['audit']['reporter'] = 'chef-automate'
+# default['audit']['profiles'] = [
+#   {
+#     name: 'workstation-1/windows-baseline',
+#     compliance: 'workstation-1/windows-baseline'
+#   },
+#   {
+#     name: 'workstation-1/windows-patch-baseline',
+#     compliance: 'workstation-1/windows-patch-baseline'
+#   }
+# ]
